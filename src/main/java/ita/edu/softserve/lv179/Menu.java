@@ -26,9 +26,9 @@ public class Menu {
 	};
 	
 	private void display(){
-		for(String item : menuPoints){
-			System.out.println(item);
-			System.out.println("------------------");
+		for(int i = 0; i<menuPoints.length; i++){
+			System.out.println(menuPoints[i]+"\t||"+menuPoints[++i]);
+			System.out.println("-------------------------------------------------------");
 	}
 }
 	public void caseMenuItem(){
