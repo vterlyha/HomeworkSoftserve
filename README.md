@@ -1,0 +1,3 @@
+# HomeworkSoftserve
+
+Simple Clsses
