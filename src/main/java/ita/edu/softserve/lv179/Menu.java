@@ -4,6 +4,7 @@ import java.util.Scanner;
 import ita.edu.softserve.lv179.usersclases.HomeworkTerlyha;
 import ita.edu.softserve.lv179.usersclases.HomeworkKrokhmalyuk;
 import ita.edu.softserve.lv179.usersclases.HomeWorkPetryk;
+import ita.edu.softserve.lv179.usersclases.HomeworkVarvariuk;
 
 /**
  * Class Menu contains all needed data to perform App.
@@ -16,14 +17,14 @@ public class Menu {
 
 	private final String[] menuPoints = { "1 - exersise 182", "2 - exersise 323", "3 - exersise 560",
 			"4 - exersise 108", "5 - exersise 325", "6 - exersise 561", "7 - exersise 178.g", "8 - exersise 178.d",
-			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise XXX",
-			"14 - exersise XXX", "15 - exersise XXX", "16 - exersise XXX", "17 - exersise XXX", "18 - exersise XXX",
-			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX" };
+			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise 81a",
+			"14 - exersise 81b", "15 - exersise 330", "16 - exersise XXX", "17 - exersise XXX", "18 - exersise XXX",
+			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX","0 - for Exit " };
 
 	private void display() {
 		for (int i = 0; i < menuPoints.length; i++) {
 		    if (i != menuPoints.length-1) {
-			System.out.println(menuPoints[i] + "\t||" + menuPoints[++i]);
+			System.out.println(menuPoints[i] + "\t||\t" + menuPoints[++i]);
 			System.out.println("-------------------------------------------------------");
 		    } else {
 		        System.out.println(menuPoints[i]);
@@ -84,6 +85,15 @@ public class Menu {
 				break;
 			case "9":
 				HomeworkKrokhmalyuk.function555();
+				break;
+			case "13":
+				HomeworkVarvariuk.solveExercise86a();
+				break;
+			case "14":
+				HomeworkVarvariuk.solveExercise86b();
+				break;
+			case "15":
+				HomeworkVarvariuk.solveExercise330();
 				break;
 			default:
 				System.out.println("\nYou entered invalid symbol\n");
