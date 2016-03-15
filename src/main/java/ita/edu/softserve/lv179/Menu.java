@@ -19,12 +19,12 @@ public class Menu {
 			"4 - exersise 108", "5 - exersise 325", "6 - exersise 561", "7 - exersise 178.g", "8 - exersise 178.d",
 			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise 81a",
 			"14 - exersise 81b", "15 - exersise 330", "16 - exersise XXX", "17 - exersise XXX", "18 - exersise XXX",
-			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX" };
+			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX","0 - for Exit " };
 
 	private void display() {
 		for (int i = 0; i < menuPoints.length; i++) {
 		    if (i != menuPoints.length-1) {
-			System.out.println(menuPoints[i] + "\t||" + menuPoints[++i]);
+			System.out.println(menuPoints[i] + "\t||\t" + menuPoints[++i]);
 			System.out.println("-------------------------------------------------------");
 		    } else {
 		        System.out.println(menuPoints[i]);
