@@ -29,12 +29,12 @@ public final class HomeworkTerlyha {
         System.out.println("Find the smallest number of format 2^r that is bigger than given natural number");
         Scanner sc = new Scanner(System.in);
         int naturalNumber = sc.nextInt();
+        System.out.println("Here is your number");
         int result = 1;
         while (result <= naturalNumber) {
             result *= 2;
         }
         System.out.println(result);
-        sc.close();
     }
 
     /**
@@ -46,6 +46,7 @@ public final class HomeworkTerlyha {
         System.out.println("Find simple dividers of given natural number");
         Scanner sc = new Scanner(System.in);
         int naturalNumber = sc.nextInt();
+        System.out.println("Here are your dividers");
         for (int i = 2; i < naturalNumber; i++) {
             if ((naturalNumber % i) == 0) {
                 int divider = 0;
@@ -59,7 +60,7 @@ public final class HomeworkTerlyha {
                 }
             }
         }
-        sc.close();
+        System.out.println();
     }
 
     /**
@@ -72,6 +73,7 @@ public final class HomeworkTerlyha {
         final int modulusDividerIncrement = 10;
         Scanner sc = new Scanner(System.in);
         int naturalNumber = sc.nextInt();
+        System.out.println("Here are your numbers");
         for (int i = 1; i <= naturalNumber; i++) {
             int length = Integer.toString(i).length();
             int modulusDivider = modulusDividerIncrement;
@@ -84,7 +86,7 @@ public final class HomeworkTerlyha {
                 modulusDivider *= modulusDividerIncrement;
             }
         }
-        sc.close();
+        System.out.println();
     }
 }
 
