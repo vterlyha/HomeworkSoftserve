@@ -78,10 +78,12 @@ public class Menu {
 				HomeworkTerlyha.solveExcercise561();
 				break;
 			case "7":
-				HomeworkKrokhmalyuk.function178D();
+				HomeworkKrokhmalyuk.SupportPrint printForFunc178G = new HomeworkKrokhmalyuk.SupportPrint();
+				printForFunc178G.printMethodInfoForExersise178G();
 				break;
-			case "8":
-				HomeworkKrokhmalyuk.function178G();
+			case "8":				
+				HomeworkKrokhmalyuk.SupportPrint printForFunc178D = new HomeworkKrokhmalyuk.SupportPrint();
+				printForFunc178D.printMethodInfoForExersise178D();
 				break;
 			case "9":
 				HomeworkKrokhmalyuk.function555();
