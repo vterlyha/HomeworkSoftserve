@@ -1,47 +1,32 @@
 package ita.edu.softserve.lv179.usersclases;
 
 import java.util.Scanner;
+import java.util.*;
 
 public class HomeworkVarvariuk {
-
-	public static void solveExercise86a() {
-		System.out.println("Write down positive integer; how many digits does it contain?:");
-
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
+	
+	public static int calculateCounterTask86a(int num) {
 		int number = num;
-		Integer counter = 0;
+		int counterTask1 = 0;
 		while ((number % 10) != 0) {
 			number = number / 10;
-			counter++;
+			counterTask1++;
 		}
-		System.out.println("The counter is: " + counter);
+		return counterTask1;
 	}
-
-	public static void solveExercise86b() {
-		System.out.println("Write down positive integer; What is the sum of it's digits?:");
-
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
+	
+	public static int calculateSumTask86b(int num) {
 		int number = num;
-		Integer sum = number % 10;
+		int sum = number % 10;
 		while ((number % 10) != 0) {
 			number = number / 10;
 			sum += number % 10;
 		}
-		System.out.println("The sum is: " + sum);
+		return sum;
 	}
-
-	public static void solveExercise330() {
-		System.out.println("Positive integer is perfect if it is equal to the sum of all it's dividers, exept itself:");
-		System.out.println("Enter the number to find all perfect numbers that are less than it");
-
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		String output = "Perfect sums: ";
+	
+	public static String findAllPerfectNumbersTask330(int num) {
+		String perfectNumbers = "";
 		int perfectSum = 0;
 		for (int i = 1; i < num; i++) {
 			for (int j = 1; j < i; j++) {
@@ -50,11 +35,38 @@ public class HomeworkVarvariuk {
 				}
 			}
 			if (perfectSum == i) {
-				output += i + ",";
+				perfectNumbers += i + ", ";
 			}
 			perfectSum = 0;
 		}
-		System.out.println(output);
-		;
+		return perfectNumbers;
+	}
+	
+	public static void solveExercise86a() {
+		System.out.println("Write down positive integer; ");
+		System.out.println("how many digits does it contain?:");
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("The counter is: " 
+		+ calculateCounterTask86a(sc.nextInt()));
+	}
+
+	public static void solveExercise86b() {
+		System.out.println("Write down positive integer; ");
+		System.out.println("What is the sum of it's digits?:");
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("The sum is: " + calculateSumTask86b(sc.nextInt()));
+	}
+
+	public static void solveExercise330() {
+		System.out.println("Positive integer is perfect if it is " 
+				+ "equal to the sum of all it's dividers, exept itself:");
+		System.out.println("Enter the number to find all " + 
+				"perfect numbers that are less than it");
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Perfect numbers: " 
+		+ findAllPerfectNumbersTask330(sc.nextInt()));
 	}
 }
