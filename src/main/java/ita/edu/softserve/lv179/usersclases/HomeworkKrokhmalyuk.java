@@ -3,16 +3,19 @@ package ita.edu.softserve.lv179.usersclases;
 import java.util.Scanner;
 
 public class HomeworkKrokhmalyuk {
-		
-	private HomeworkKrokhmalyuk() {		
+
+	private HomeworkKrokhmalyuk() {
 	}
-	
-/*Calculate numbers which subject condition */
+
+	/**
+	 * Calculate numbers which subject condition
+	 */
 	public static void function178G() {
 		System.out.println("Enter array length : ");
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		int arrayLength = scanner.nextInt();
-		int array [] = generateArray(arrayLength);
+		int array[] = generateArray(arrayLength);
 		int counter = 0;
 		for (int i = 0; i < array.length; i++) {
 			if (i == 0) {
@@ -25,12 +28,16 @@ public class HomeworkKrokhmalyuk {
 		}
 		System.out.println(counter);
 	}
-	/*Calculate numbers which subject condition */
+
+	/**
+	 * Calculate numbers which subject condition
+	 */
 	public static void function178D() {
 		System.out.println("Enter array length : ");
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		int arrayLength = scanner.nextInt();
-		int [] array = generateArray(arrayLength);
+		int[] array = generateArray(arrayLength);
 		int counter = 0;
 		for (int i = 0; i < array.length; i++) {
 			if ((array[i] > Math.pow(2, i)) && (array[i] < factorial(i))) {
@@ -40,26 +47,30 @@ public class HomeworkKrokhmalyuk {
 		}
 		System.out.println(counter);
 	}
-/* Show Pascal Triagle */
-	public static void function555(){
+
+	/** 
+	 * Show Pascal Triangle 
+	 */
+	public static void function555() {
 		System.out.println("Enter triagle height :");
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		int triagleHeight = scanner.nextInt();
 		for (int i = 0; i < triagleHeight; i++) {
-            int number  = 1;
-            System.out.format("%"+(triagleHeight - i)*2+"s","");
-            for (int j = 0; j <= i; j++) {
-                System.out.printf("%4d", number);
-                number=number * (i - j) / (j + 1); 
-            }
-            System.out.println("");
-        }
+			int number = 1;
+			System.out.format("%" + (triagleHeight - i) * 2 + "s", "");
+			for (int j = 0; j <= i; j++) {
+				System.out.printf("%4d", number);
+				number = number * (i - j) / (j + 1);
+			}
+			System.out.println("");
+		}
 	}
-	
-	private static int [] generateArray(int arraylength){
-		int array [] = new int [arraylength];
-		for(int i = 0; i<arraylength;i++){
-		array [i] = i;
+
+	private static int[] generateArray(int arraylength) {
+		int array[] = new int[arraylength];
+		for (int i = 0; i < arraylength; i++) {
+			array[i] = i;
 		}
 		return array;
 	}
@@ -70,8 +81,8 @@ public class HomeworkKrokhmalyuk {
 		}
 		return i * factorial(i - 1);
 	}
-	
-	public static HomeworkKrokhmalyuk getInstance(){
+
+	public static HomeworkKrokhmalyuk getInstance() {
 		return new HomeworkKrokhmalyuk();
 	}
 }
