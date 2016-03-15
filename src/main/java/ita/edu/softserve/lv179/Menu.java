@@ -19,17 +19,17 @@ public class Menu {
 			"4 - exersise 108", "5 - exersise 325", "6 - exersise 561", "7 - exersise 178.g", "8 - exersise 178.d",
 			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise 81a",
 			"14 - exersise 81b", "15 - exersise 330", "16 - exersise XXX", "17 - exersise XXX", "18 - exersise XXX",
-			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX","0 - for Exit " };
+			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX", "0 - for Exit " };
 
 	private void display() {
 		for (int i = 0; i < menuPoints.length; i++) {
-		    if (i != menuPoints.length-1) {
-			System.out.println(menuPoints[i] + "\t||\t" + menuPoints[++i]);
-			System.out.println("-------------------------------------------------------");
-		    } else {
-		        System.out.println(menuPoints[i]);
-		        break;
-		    }
+			if (i != menuPoints.length - 1) {
+				System.out.println(menuPoints[i] + "\t||\t" + menuPoints[++i]);
+				System.out.println("-------------------------------------------------------");
+			} else {
+				System.out.println(menuPoints[i]);
+				break;
+			}
 		}
 
 	}
@@ -61,44 +61,57 @@ public class Menu {
 				break;
 			case "1":
 				HomeWorkPetryk.solveExercise182();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "2":
 				HomeWorkPetryk.solveExercise323();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "3":
 				HomeWorkPetryk.solveExercise560();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "4":
 				HomeworkTerlyha.solveExcercise108();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "5":
 				HomeworkTerlyha.solveExcercise325();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "6":
 				HomeworkTerlyha.solveExcercise561();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "7":
 				HomeworkKrokhmalyuk.SupportPrint printForFunc178G = new HomeworkKrokhmalyuk.SupportPrint();
 				printForFunc178G.printMethodInfoForExersise178G();
+				System.out.println("-------------------------------------------------------");
 				break;
-			case "8":				
+			case "8":
 				HomeworkKrokhmalyuk.SupportPrint printForFunc178D = new HomeworkKrokhmalyuk.SupportPrint();
 				printForFunc178D.printMethodInfoForExersise178D();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "9":
 				HomeworkKrokhmalyuk.function555();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "13":
 				HomeworkVarvariuk.solveExercise86a();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "14":
 				HomeworkVarvariuk.solveExercise86b();
+				System.out.println("-------------------------------------------------------");
 				break;
 			case "15":
 				HomeworkVarvariuk.solveExercise330();
+				System.out.println("-------------------------------------------------------");
 				break;
 			default:
 				System.out.println("\nYou entered invalid symbol\n");
+				System.out.println("-------------------------------------------------------");
 
 			}
 

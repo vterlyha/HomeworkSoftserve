@@ -40,11 +40,10 @@ public class HomeWorkPetryk {
 	 */
 	public static void solveExercise182() {
 
-		System.out.println("Enter any Natural number: /n");
+		System.out.println("Enter any Natural number: \n");
 		int count = 0;
 		int sum = 0;
 
-		System.out.println("Please, enter number N, as the length of created array: /n");
 		int arrayLength = getInt();
 		int[] mas = new int[arrayLength];
 
@@ -67,7 +66,7 @@ public class HomeWorkPetryk {
 	 * Solving Exercise No. 323.
 	 */
 	public static void solveExercise323() {
-		System.out.println("Enter your number");
+		System.out.println("Enter your number: \n");
 
 		int arrayLength = getInt();
 		List<Integer> naturalNumbersList = new ArrayList<Integer>();
