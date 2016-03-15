@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import ita.edu.softserve.lv179.usersclases.HomeworkVarvariuk;
-import junit.framework.Assert;
+
 
 public class VarvariukHomeworkTest {
 
@@ -12,17 +12,17 @@ public class VarvariukHomeworkTest {
 
 	@Test
 	public void testVarvariuk86a() {
-		Assert.assertEquals(3, homeworkVarvariuk.calculateCounterTask86a(123));
+		assertEquals(3, homeworkVarvariuk.calculateCounterTask86a(123));
 	}
 
 	@Test
 	public void testVarvariuk86b() {
-		Assert.assertEquals(6, homeworkVarvariuk.calculateSumTask86b(123));
+		assertEquals(6, homeworkVarvariuk.calculateSumTask86b(123));
 	}
 
 	@Test
 	public void testVarvariuk330() {
-		Assert.assertEquals("6, 28, ", homeworkVarvariuk.findAllPerfectNumbersTask330(30));
+		assertEquals("6, 28, ", homeworkVarvariuk.findAllPerfectNumbersTask330(30));
 	}
 
 }
