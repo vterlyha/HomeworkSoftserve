@@ -14,7 +14,8 @@ public class HomeworkKrokhmalyuk {
 			System.out.println("Enter array length : ");
 			int arrayLength = scanner.nextInt();
 			System.out.println(function178D(arrayLength));
-		}	
+		}
+		
 		public static void printMethodInfoForExersise178G(){
 			System.out.println("Enter array length : ");
 			int arrayLength = scanner.nextInt();
@@ -83,9 +84,5 @@ public class HomeworkKrokhmalyuk {
 			return 1;
 		}
 		return i * factorial(i - 1);
-	}
-	
-	public static HomeworkKrokhmalyuk getInstance() {
-		return new HomeworkKrokhmalyuk();
 	}
 }

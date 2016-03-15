@@ -8,7 +8,7 @@ import ita.edu.softserve.lv179.usersclases.HomeworkKrokhmalyuk;
 import junit.framework.Assert;
 
 public class KrokhmalyukHomeworkTest {
-	HomeworkKrokhmalyuk homeworkKrokhmalyuk = HomeworkKrokhmalyuk.getInstance();
+	HomeworkKrokhmalyuk homeworkKrokhmalyuk = new HomeworkKrokhmalyuk();
 
 	@Test
 	public void testFactorial(){
