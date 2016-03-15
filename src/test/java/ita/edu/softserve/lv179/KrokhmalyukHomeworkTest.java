@@ -12,19 +12,19 @@ public class KrokhmalyukHomeworkTest {
 
 	@Test
 	public void testFactorial(){
-		Assert.assertEquals(homeworkKrokhmalyuk.factorial(0), 1);
+		assertEquals(homeworkKrokhmalyuk.factorial(0), 1);
 	}
 	
 	@Test
 	public void testFunction178D(){
-		Assert.assertEquals(homeworkKrokhmalyuk.function178D(8), "034567");
-		Assert.assertEquals(homeworkKrokhmalyuk.function178D(1), "0");
-		Assert.assertEquals(homeworkKrokhmalyuk.function178D(4), "03");	
+		assertEquals(homeworkKrokhmalyuk.function178D(8), "034567");
+		assertEquals(homeworkKrokhmalyuk.function178D(1), "0");
+		assertEquals(homeworkKrokhmalyuk.function178D(4), "03");	
 	}
 	
 	@Test
 	public void testFunction178G(){
-		Assert.assertEquals(homeworkKrokhmalyuk.function178G(4), "3");
-		Assert.assertEquals(homeworkKrokhmalyuk.function178G(2), "");
+		assertEquals(homeworkKrokhmalyuk.function178G(4), "3");
+		assertEquals(homeworkKrokhmalyuk.function178G(2), "");
 	}	
 }
