@@ -8,11 +8,11 @@ import java.util.Scanner;
  * Class for solving tasks 182, 323, 560 from book "Zadachi po programirovaniu".
  *
  * @version 1.0
- * @author  Andrew Petryk
+ * @author Andrew Petryk
  *
  */
 public class HomeWorkPetryk {
-	
+
 	/**
 	 * @param FIRST_DIVIDER
 	 *            is used for checking if a natural number can be divided by 5.
@@ -40,9 +40,11 @@ public class HomeWorkPetryk {
 	 */
 	public static void solveExercise182() {
 
+		System.out.println("Enter any Natural number: /n");
 		int count = 0;
 		int sum = 0;
 
+		System.out.println("Please, enter number N, as the length of created array: /n");
 		int arrayLength = getInt();
 		int[] mas = new int[arrayLength];
 
@@ -132,7 +134,7 @@ public class HomeWorkPetryk {
 	 *            second natural Number
 	 * @return the amount of dividers of 'a' and 'b'
 	 */
-	private static int gcd(int a, int b) {
+	public static int gcd(int a, int b) {
 		if (b == 0) {
 			return a;
 		} else {
@@ -147,7 +149,7 @@ public class HomeWorkPetryk {
 	 *            is the natural number which is segregate
 	 * @return sum of all dividers of 'j'
 	 */
-	private static int sumA(int j) {
+	public static int sumA(int j) {
 
 		int sumA = 0;
 		for (int i = 1; i < j; i++) {
