@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Class for solving tasks 182, 323, 560 from book "Zadachi po programirovaniu".
+ *
+ * @version 1.0
+ * @author  Andrew Petryk
+ *
+ */
 public class HomeWorkPetryk {
 	
 	/**
