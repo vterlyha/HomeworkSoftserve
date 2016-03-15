@@ -22,9 +22,13 @@ public class Menu {
 
 	private void display() {
 		for (int i = 0; i < menuPoints.length; i++) {
+			if(i == menuPoints.length-1){System.out.println(menuPoints[menuPoints.length-1]);
+			break;}
 			System.out.println(menuPoints[i] + "\t||" + menuPoints[++i]);
 			System.out.println("-------------------------------------------------------");
-		}
+			
+			}
+			
 	}
 
 	/**
