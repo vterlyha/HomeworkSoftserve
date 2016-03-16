@@ -5,6 +5,7 @@ import ita.edu.softserve.lv179.usersclases.HomeworkTerlyha;
 import ita.edu.softserve.lv179.usersclases.HomeworkKrokhmalyuk;
 import ita.edu.softserve.lv179.usersclases.HomeWorkPetryk;
 import ita.edu.softserve.lv179.usersclases.HomeworkVarvariuk;
+import ita.edu.softserve.lv179.usersclases.HomeWorkBervetskyy;
 
 /**
  * Class Menu contains all needed data to perform App.
@@ -18,7 +19,7 @@ public class Menu {
 	private final String[] menuPoints = { "1 - exersise 182", "2 - exersise 323", "3 - exersise 560",
 			"4 - exersise 108", "5 - exersise 325", "6 - exersise 561", "7 - exersise 178.g", "8 - exersise 178.d",
 			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise 81a",
-			"14 - exersise 81b", "15 - exersise 330", "16 - exersise XXX", "17 - exersise XXX", "18 - exersise XXX",
+			"14 - exersise 81b", "15 - exersise 330", "16 - exersise 88a", "17 - exersise 88b", "18 - exersise 322",
 			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX", "0 - for Exit " };
 
 	private void display() {
@@ -60,15 +61,15 @@ public class Menu {
 				status = false;
 				break;
 			case "1":
-				HomeWorkPetryk.solveExercise182();
+				HomeWorkPetryk.solveExercise182(HomeWorkPetryk.returnNaturalNumber());
 				System.out.println("-------------------------------------------------------");
 				break;
 			case "2":
-				HomeWorkPetryk.solveExercise323();
+				HomeWorkPetryk.printResult(HomeWorkPetryk.solveExercise323(HomeWorkPetryk.returnNaturalNumber()));
 				System.out.println("-------------------------------------------------------");
 				break;
 			case "3":
-				HomeWorkPetryk.solveExercise560();
+				HomeWorkPetryk.printResult(HomeWorkPetryk.solveExercise560());
 				System.out.println("-------------------------------------------------------");
 				break;
 			case "4":
@@ -109,6 +110,19 @@ public class Menu {
 				HomeworkVarvariuk.solveExercise330();
 				System.out.println("-------------------------------------------------------");
 				break;
+			case "16":
+				HomeWorkBervetskyy.solveExercise88a();
+				System.out.println("-------------------------------------------------------");
+				break;
+			case "17":
+				HomeWorkBervetskyy.solveExercise88b();
+				System.out.println("-------------------------------------------------------");
+				break;
+			case "18":
+				HomeWorkBervetskyy.solveExercise322();
+				System.out.println("-------------------------------------------------------");
+				break;
+				
 			default:
 				System.out.println("\nYou entered invalid symbol\n");
 				System.out.println("-------------------------------------------------------");

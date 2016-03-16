@@ -36,16 +36,30 @@ public class HomeWorkPetryk {
 	}
 
 	/**
-	 * Solving Exercise No. 182.
+	 * 
+	 * @return int data: naturalN
 	 */
-	public static void solveExercise182() {
+	public static int returnNaturalNumber() {
 
-		System.out.println("Enter any Natural number: \n");
+		System.out.println("Enter your number: ");
+		int naturalN = getInt();
+
+		return naturalN;
+
+	}
+
+	/**
+	 * Solving Exercise No. 182.
+	 * 
+	 * @param naturalNumber
+	 * @return String
+	 */
+	public static String solveExercise182(int naturalNumber) {
+
 		int count = 0;
 		int sum = 0;
 
-		int arrayLength = getInt();
-		int[] mas = new int[arrayLength];
+		int[] mas = new int[naturalNumber];
 
 		for (int i = 0; i < mas.length; i++) {
 			mas[i] = i;
@@ -58,35 +72,47 @@ public class HomeWorkPetryk {
 			}
 		}
 
-		System.out.println("Summary of all needed natural numbers is: " + sum);
-		System.out.println("Total amount of needed " + "natural number is: " + count);
+		return "Sum is " + sum + " Total is " + count;
+	}
+
+	/**
+	 * Print the results of Exercises.
+	 * 
+	 * @param list
+	 */
+	public static void printResult(List<?> list) {
+
+		for (Object object : list) {
+			System.out.println(object);
+		}
 	}
 
 	/**
 	 * Solving Exercise No. 323.
+	 * 
+	 * @param naturalNumber
+	 * @return List<Integer>
 	 */
-	public static void solveExercise323() {
-		System.out.println("Enter your number: \n");
+	public static List<Integer> solveExercise323(int naturalNumber) {
 
-		int arrayLength = getInt();
 		List<Integer> naturalNumbersList = new ArrayList<Integer>();
 
-		for (int i = 1; i <= arrayLength - 1; i++) {
+		for (int i = 1; i <= naturalNumber - 1; i++) {
 
-			if (gcd(i, arrayLength) == 1) {
+			if (gcd(i, naturalNumber) == 1) {
 				naturalNumbersList.add(i);
 			}
 		}
 
-		for (Integer integer : naturalNumbersList) {
-			System.out.println(integer);
-		}
+		return naturalNumbersList;
 	}
 
 	/**
 	 * Solving Exercise No. 560.
+	 * 
+	 * @return List<String>
 	 */
-	public static void solveExercise560() {
+	public static List<String> solveExercise560() {
 
 		List<String> friendlyNums = new ArrayList<String>();
 		for (int i = 200; i <= 300; i++) {
@@ -102,13 +128,7 @@ public class HomeWorkPetryk {
 			}
 		}
 
-		if (friendlyNums.isEmpty()) {
-			System.out.println("no friendly numbers ;(");
-		} else {
-			for (String string : friendlyNums) {
-				System.out.println(string);
-			}
-		}
+		return friendlyNums;
 	}
 
 	/**
@@ -131,9 +151,9 @@ public class HomeWorkPetryk {
 	 *            first natural Number
 	 * @param b
 	 *            second natural Number
-	 * @return the amount of dividers of 'a' and 'b'
+	 * @return the amount of dividers of @param a and @param b.
 	 */
-	public static int gcd(int a, int b) {
+	private static int gcd(int a, int b) {
 		if (b == 0) {
 			return a;
 		} else {
@@ -146,7 +166,7 @@ public class HomeWorkPetryk {
 	 * 
 	 * @param j
 	 *            is the natural number which is segregate
-	 * @return sum of all dividers of 'j'
+	 * @return sum of all dividers of @param j
 	 */
 	public static int sumA(int j) {
 
@@ -158,6 +178,6 @@ public class HomeWorkPetryk {
 		}
 
 		return sumA;
-
 	}
+
 }
