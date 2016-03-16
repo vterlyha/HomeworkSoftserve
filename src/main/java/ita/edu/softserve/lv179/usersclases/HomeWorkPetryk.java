@@ -153,7 +153,7 @@ public class HomeWorkPetryk {
 	 *            second natural Number
 	 * @return the amount of dividers of @param a and @param b.
 	 */
-	public static int gcd(int a, int b) {
+	private static int gcd(int a, int b) {
 		if (b == 0) {
 			return a;
 		} else {
