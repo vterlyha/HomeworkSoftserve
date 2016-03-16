@@ -36,6 +36,11 @@ public class TerlyhaHomeworkTest {
         List<Integer> expected = HomeworkTerlyha.findNaturalNumbersForTask561(100);
         assertThat(actual, is(expected));
     }
+    
+    @Test
+    public void testvalidateInputInformation() {
+        assertEquals(4, HomeworkTerlyha.findNumberForTask108(2));
+    }
 
 
 }
