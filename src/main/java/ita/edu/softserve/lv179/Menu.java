@@ -60,15 +60,15 @@ public class Menu {
 				status = false;
 				break;
 			case "1":
-				HomeWorkPetryk.solveExercise182();
+				HomeWorkPetryk.solveExercise182(HomeWorkPetryk.returnNaturalNumber());
 				System.out.println("-------------------------------------------------------");
 				break;
 			case "2":
-				HomeWorkPetryk.solveExercise323();
+				HomeWorkPetryk.printResult(HomeWorkPetryk.solveExercise323(HomeWorkPetryk.returnNaturalNumber()));
 				System.out.println("-------------------------------------------------------");
 				break;
 			case "3":
-				HomeWorkPetryk.solveExercise560();
+				HomeWorkPetryk.printResult(HomeWorkPetryk.solveExercise560());
 				System.out.println("-------------------------------------------------------");
 				break;
 			case "4":
