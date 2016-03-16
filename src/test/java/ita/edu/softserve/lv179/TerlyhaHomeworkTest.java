@@ -6,17 +6,16 @@ import java.util.List;
 import org.junit.Test;
 
 import ita.edu.softserve.lv179.usersclases.HomeworkTerlyha;
-import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
-public class TerlyhaHomeworkTest extends TestCase {
-  
+public class TerlyhaHomeworkTest {
+
     @Test
     public void testfindNumberForTask108() {
         assertEquals(4, HomeworkTerlyha.findNumberForTask108(2));
     }
-    
+
     @Test
     public void testFindDividersForTask325() {
         List<Integer> actual = new ArrayList<Integer>();
@@ -25,7 +24,7 @@ public class TerlyhaHomeworkTest extends TestCase {
         List<Integer> expected = HomeworkTerlyha.findDividersForTask325(1111);
         assertThat(actual, is(expected));
     }
-    
+
     @Test
     public void testfindNaturalNumbersForTask561() {
         List<Integer> actual = new ArrayList<Integer>();
