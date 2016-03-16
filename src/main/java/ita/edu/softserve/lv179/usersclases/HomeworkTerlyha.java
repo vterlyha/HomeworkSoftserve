@@ -17,6 +17,16 @@ import java.util.Scanner;
 public final class HomeworkTerlyha {
 
     /**
+     * Parameter put by user.
+     */
+    private static int userInput;
+
+    /**
+     * Scanner is used to set the info entered by user.
+     */
+    private static Scanner sc = new Scanner(System.in);
+
+    /**
      * Class constructor.
      */
     private HomeworkTerlyha() {
@@ -26,38 +36,35 @@ public final class HomeworkTerlyha {
      * Method solves task 108.
      */
     public static void solveExcercise108() {
-        System.out.println("Find the smallest number of format 2^r that is bigger than given natural number");
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Here is your number: "
-        + HomeworkTerlyha.findNumberForTask108(sc.nextInt()));
+            System.out.println("Find the smallest number of format 2^r that is bigger than given natural number");
+            userInput = validateInputInformation();
+            System.out.println("Here is your number: " + HomeworkTerlyha.findNumberForTask108(userInput));
     }
 
     /**
      * Method solves task 325.
      */
     public static void solveExcercise325() {
-        System.out.println("Find simple dividers of given natural number");
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Here are your dividers: "
-                + HomeworkTerlyha.findDividersForTask325(sc.nextInt()));
+
+            System.out.println("Find simple dividers of given natural number");
+            userInput = validateInputInformation();
+            System.out.println("Here are your dividers: " + HomeworkTerlyha.findDividersForTask325(userInput));
+
+
     }
 
     /**
-     * Method solves task 325.
+     * Method solves task 561.
      */
     public static void solveExcercise561() {
         System.out.println("Find all natural numbers, that coincide with last numbers of its squares");
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Here are your numbers: "
-                + HomeworkTerlyha.findNaturalNumbersForTask561(sc.nextInt()));
+        userInput = validateInputInformation();
+        System.out.println("Here are your numbers: " + HomeworkTerlyha.findNaturalNumbersForTask561(userInput));
     }
 
     /**
      * Method used in solveExcercise108().
-     * 
+     *
      * @param naturalNumber natural number that is entered from console.
      * @return returns all natural numbers, that coincide with last numbers of its squares.
      */
@@ -71,7 +78,7 @@ public final class HomeworkTerlyha {
 
     /**
      * Method used in solveExcercise325().
-     * 
+     *
      * @param naturalNumber natural number that is entered from console.
      * @return returns simple dividers of given natural number.
      */
@@ -95,27 +102,45 @@ public final class HomeworkTerlyha {
 
     /**
      * Method used in solveExcercise561().
-     * 
+     *
      * @param naturalNumber natural number that is entered from console.
      * @return returns all natural numbers, that coincide with last numbers of its squares.
      */
     public static List<Integer> findNaturalNumbersForTask561(int naturalNumber) {
-        final int modulusDividerIncrement = 10;
-        List<Integer> naturalNumbers = new ArrayList<Integer>();
-        for (int i = 1; i <= naturalNumber; i++) {
-            int length = Integer.toString(i).length();
-            int modulusDivider = modulusDividerIncrement;
-            for (int a = 0; a < length; a++) {
-                int result = (i * i) % modulusDivider;
-                if (result == i) {
-                    naturalNumbers.add(result);
-                    break;
+            final int modulusDividerIncrement = 10;
+            List<Integer> naturalNumbers = new ArrayList<Integer>();
+            for (int i = 1; i <= naturalNumber; i++) {
+                int length = Integer.toString(i).length();
+                int modulusDivider = modulusDividerIncrement;
+                for (int a = 0; a < length; a++) {
+                    int result = (i * i) % modulusDivider;
+                    if (result == i) {
+                        naturalNumbers.add(result);
+                        break;
+                    }
+                    modulusDivider *= modulusDividerIncrement;
                 }
-                modulusDivider *= modulusDividerIncrement;
             }
-        }
-        return naturalNumbers;
+            return naturalNumbers;
     }
+
+    /**
+     * Method used to validate input information.
+     *
+     * @return returns information, that was inputed by user.
+     */
+    private static int validateInputInformation() {
+        do {
+            System.out.println("Please enter a natural number!");
+            while (!sc.hasNextInt()) {
+                System.out.println("That's not a number!");
+                sc.next();
+            }
+            userInput = sc.nextInt();
+        } while (userInput <= 0);
+        return userInput;
+    }
+
 }
 
 
