@@ -6,6 +6,7 @@ import ita.edu.softserve.lv179.usersclases.HomeworkKrokhmalyuk;
 import ita.edu.softserve.lv179.usersclases.HomeWorkPetryk;
 import ita.edu.softserve.lv179.usersclases.HomeworkVarvariuk;
 import ita.edu.softserve.lv179.usersclases.HomeWorkBervetskyy;
+import ita.edu.softserve.lv179.usersclases.HomeworkKobevka;
 
 /**
  * Class Menu contains all needed data to perform App.
@@ -20,7 +21,7 @@ public class Menu {
 			"4 - exersise 108", "5 - exersise 325", "6 - exersise 561", "7 - exersise 178.g", "8 - exersise 178.d",
 			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise 81a",
 			"14 - exersise 81b", "15 - exersise 330", "16 - exersise 88a", "17 - exersise 88b", "18 - exersise 322",
-			"19 - exersise XXX", "20 - exersise XXX", "21 - exersise XXX", "0 - for Exit " };
+			"19 - exersise 107", "20 - exersise 243a", "21 - exersise 243b", "0 - for Exit " };
 
 	private void display() {
 		for (int i = 0; i < menuPoints.length; i++) {
@@ -122,7 +123,18 @@ public class Menu {
 				HomeWorkBervetskyy.solveExercise322();
 				System.out.println("-------------------------------------------------------");
 				break;
-				
+			case "19":
+				HomeworkKobevka.solveExercise107(13);
+				System.out.println("-------------------------------------------------------");
+				break;
+			case "20":
+				HomeworkKobevka.solveExercise243a(13);
+				System.out.println("-------------------------------------------------------");
+				break;
+			case "21":
+				HomeworkKobevka.solveExercise243b(13);
+				System.out.println("-------------------------------------------------------");
+				break;
 			default:
 				System.out.println("\nYou entered invalid symbol\n");
 				System.out.println("-------------------------------------------------------");
