@@ -1,12 +1,8 @@
 package ita.edu.softserve.lv179;
 
 import java.util.Scanner;
-import ita.edu.softserve.lv179.usersclases.HomeworkTerlyha;
-import ita.edu.softserve.lv179.usersclases.HomeworkKrokhmalyuk;
-import ita.edu.softserve.lv179.usersclases.HomeWorkPetryk;
-import ita.edu.softserve.lv179.usersclases.HomeworkVarvariuk;
-import ita.edu.softserve.lv179.usersclases.HomeWorkBervetskyy;
-import ita.edu.softserve.lv179.usersclases.HomeworkKobevka;
+
+import ita.edu.softserve.lv179.usersclases.*;
 
 /**
  * Class Menu contains all needed data to perform App.
@@ -19,7 +15,7 @@ public class Menu {
 
 	private final String[] menuPoints = { "1 - exersise 182", "2 - exersise 323", "3 - exersise 560",
 			"4 - exersise 108", "5 - exersise 325", "6 - exersise 561", "7 - exersise 178.g", "8 - exersise 178.d",
-			"9 - exersise 555", "10 - exersise XXX", "11 - exersise XXX", "12 - exersise XXX", "13 - exersise 81a",
+			"9 - exersise 555", "10 - exersise 87", "11 - exersise 323", "12 - exersise 559", "13 - exersise 81a",
 			"14 - exersise 81b", "15 - exersise 330", "16 - exersise 88a", "17 - exersise 88b", "18 - exersise 322",
 			"19 - exersise 107", "20 - exersise 243a", "21 - exersise 243b", "0 - for Exit " };
 
@@ -99,6 +95,18 @@ public class Menu {
 				HomeworkKrokhmalyuk.function555();
 				System.out.println("-------------------------------------------------------");
 				break;
+            case "10":
+                HomeWorkBondar.showTask87();
+                System.out.println("-------------------------------------------------------");
+                break;
+            case "11":
+                HomeWorkBondar.showTask323();
+                System.out.println("-------------------------------------------------------");
+                break;
+            case "12":
+                HomeWorkBondar.showTask559();
+                System.out.println("-------------------------------------------------------");
+                break;
 			case "13":
 				HomeworkVarvariuk.solveExercise86a();
 				System.out.println("-------------------------------------------------------");
