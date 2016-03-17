@@ -2,13 +2,18 @@ package ita.edu.softserve.lv179;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Test;
-
 import ita.edu.softserve.lv179.usersclases.HomeworkTerlyha;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
+/**
+ * Class for testing methods from HomeworkTerlyha.
+ *
+ * @version 1
+ * @author  Volodymyr Terlyha
+ *
+ */
 public class TerlyhaHomeworkTest {
 
     @Test
@@ -36,11 +41,4 @@ public class TerlyhaHomeworkTest {
         List<Integer> expected = HomeworkTerlyha.findNaturalNumbersForTask561(100);
         assertThat(actual, is(expected));
     }
-    
-    @Test
-    public void testvalidateInputInformation() {
-        assertEquals(4, HomeworkTerlyha.findNumberForTask108(2));
-    }
-
-
 }
